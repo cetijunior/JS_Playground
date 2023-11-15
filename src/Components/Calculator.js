@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Plusi() {
+function Calculator() {
     // Create a state variable to store the textarea value
     const [num1Value, setNum1Value] = useState(0);
     const [num2Value, setNum2Value] = useState(0);
@@ -57,4 +57,4 @@ function Plusi() {
     );
 }
 
-export default Plusi;
+export default Calculator;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./App.css";
+//import "./App.css";
 
-function toDo() {
+function ToDo() {
     const [reminder, setReminder] = useState("");
     const [reminders, setReminders] = useState([]);
 
@@ -44,4 +44,4 @@ function toDo() {
     );
 }
 
-export default toDo;
+export default ToDo;

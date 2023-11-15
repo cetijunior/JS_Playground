@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function User_Reg() {
+function UserReg() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -90,4 +90,4 @@ function User_Reg() {
     );
 }
 
-export default User_Reg;
+export default UserReg;

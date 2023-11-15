@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Click() {
+const Counter = () => {
     const [clicks, setClicks] = useState(0);
 
     const handleClickpChange = (e) => {
@@ -27,4 +27,4 @@ function Click() {
     );
 }
 
-export default Click;
+export default Counter;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Counter() {
+function CounterEffect() {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
@@ -20,4 +20,4 @@ function Counter() {
     );
 }
 
-export default Counter;
+export default CounterEffect;
