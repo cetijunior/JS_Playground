@@ -1,35 +1,51 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Layout from './Layout';
-import Counter from './Components/Counter';
 import Home from './Components/Home';
 import Bankomati from './Components/Bankomati';
 import Calculator from './Components/Calculator';
+import Clicker from './Components/Clicker';
 import CounterEffect from './Components/CounterEffect';
-import CountriesGame from './Components/CountryCapitalGame';
+import CountriesGame from './Components/CountriesGame';
 import ToDo from './Components/ToDo';
 import ToDoCr from './Components/ToDoCr';
 import UserReg from './Components/UserReg';
+import NameSwitcher from './Components/NameSwitcher';
 
+
+const routes = [
+  { path: '/', name: 'Home', element: <Home /> },
+  { path: '/Bankomat', name: 'Bankomat', element: <Bankomati /> },
+  { path: '/Calculator', name: 'Calculator', element: <Calculator /> },
+  { path: '/Clicker', name: 'Clicker', element: <Clicker /> },
+  { path: '/CounterEffect', name: 'CounterEffect', element: <CounterEffect /> },
+  { path: '/CountriesGame', name: 'CountriesGame', element: <CountriesGame /> },
+  { path: '/ToDo', name: 'ToDo', element: <ToDo /> },
+  { path: '/ToDoCr', name: 'ToDoCr', element: <ToDoCr /> },
+  { path: '/UserReg', name: 'UserReg', element: <UserReg /> },
+  { path: '/NameSwitcher', name: 'NameSwitcher', element: <NameSwitcher /> },
+
+];
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-        <Routes>
-          <Route path='/' element={<Layout />} />
-          <Route path='/Home' element={<Home />} />
-          <Route path='/Bankomat' element={<Bankomati />} />
-          <Route path='/Calculator' element={<Calculator />} />
-          <Route path='/Counter' element={<Counter />} />
-          <Route path='/CounterEffect' element={<CounterEffect />} />
-          <Route path='/CountriesGame' element={<CountriesGame />} />
-          <Route path='/ToDo' element={<ToDo />} />
-          <Route path='/ToDoCr' element={<ToDoCr />} />
-          <Route path='/UserReg' element={<UserReg />} />
-        </Routes>
-      </div>
-    </BrowserRouter >
+    <div className='app-body' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <BrowserRouter>
+        <ul style={{ listStyleType: 'none', padding: 0, display: 'flex', flexDirection: 'row' }}>
+          {routes.map((route, index) => (
+            <li key={index} style={{ margin: '8px' }}>
+              <Link to={route.path}>{route.name}</Link>
+            </li>
+          ))}
+        </ul>
+        <div>
+          <Routes>
+            {routes.map((route, index) => (
+              <Route key={index} path={route.path} element={route.element} />
+            ))}
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </div>
   );
 };
 

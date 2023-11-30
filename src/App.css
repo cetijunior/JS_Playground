@@ -1,7 +1,7 @@
 .body{
-    background-color: aquamarine;
+    background-color: #000000;
     display: flex;
-    text-align: center;
+    text-decoration-color: #fff;
+    color: #fff;
     flex-direction: column;
-    justify-content: center;
 }

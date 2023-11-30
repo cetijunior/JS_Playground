@@ -1,12 +1,13 @@
 import { Outlet, Link } from "react-router-dom";
-import Counter from "./Components/Counter";
-import Bankomat from "./Components/Bankomati"
-import Calculator from "./Components/Calculator";
-import CounterEffect from "./Components/CounterEffect";
-import CountriesGame from "./Components/CountryCapitalGame";
-import ToDo from "./Components/ToDo";
-import ToDoCr from "./Components/ToDoCr";
-import UserReg from "./Components/UserReg";
+// import Counter from "./Components/Counter";
+// import Bankomat from "./Components/Bankomati"
+// import Calculator from "./Components/Calculator";
+// import CounterEffect from "./Components/CounterEffect";
+// import CountriesGame from "./Components/CountryCapitalGame";
+// import ToDo from "./Components/ToDo";
+// import ToDoCr from "./Components/ToDoCr";
+// import UserReg from "./Components/UserReg";
+// import NameSwitcher from './Components/NameSwitcher';
 
 
 const Layout = () => {
@@ -24,7 +25,7 @@ const Layout = () => {
                         <Link to="/Calculator">Calculator</Link>
                     </li>
                     <li>
-                        <Link to="/Counter">Counter</Link>
+                        <Link to="/Clicker">Clicker</Link>
                     </li>
                     <li>
                         <Link to="/CounterEffect">Effect</Link>
@@ -40,6 +41,9 @@ const Layout = () => {
                     </li>
                     <li>
                         <Link to="/UserReg">UserReg</Link>
+                    </li>
+                    <li>
+                        <Link to="/NameSwitcher">NameSwitcher</Link>
                     </li>
                 </ul>
             </nav>

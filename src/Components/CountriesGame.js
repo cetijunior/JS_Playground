@@ -183,7 +183,7 @@ const CountriesGame = () => {
 
                 {isClicked && (
                     <p>
-                        Bravo RrotKar
+                        Bravo
                     </p>
                 )}
             </div>
